@@ -1,9 +1,9 @@
-import Head from "next/head";
-import { useRouter } from "next/router";
-import siteMetadata from "@/data/siteMetadata";
+import Head from 'next/head'
+import { useRouter } from 'next/router'
+import siteMetadata from '@/data/siteMetadata'
 
 export const PageSeo = ({ title, description }) => {
-  const router = useRouter();
+  const router = useRouter()
   return (
     <Head>
       <title>{`${title}`}</title>
@@ -30,8 +30,8 @@ export const PageSeo = ({ title, description }) => {
         content={`${siteMetadata.siteUrl}${siteMetadata.socialBanner}`}
       />
     </Head>
-  );
-};
+  )
+}
 
 export const BlogSeo = ({
   authorDetails,
@@ -42,44 +42,44 @@ export const BlogSeo = ({
   url,
   images = [],
 }) => {
-  const router = useRouter();
-  const publishedAt = new Date(date).toISOString();
-  const modifiedAt = new Date(lastmod || date).toISOString();
+  const router = useRouter()
+  const publishedAt = new Date(date).toISOString()
+  const modifiedAt = new Date(lastmod || date).toISOString()
   let imagesArr =
     images.length === 0
       ? [siteMetadata.socialBanner]
-      : typeof images === "string"
+      : typeof images === 'string'
       ? [images]
-      : images;
+      : images
 
   const featuredImages = imagesArr.map((img) => {
     return {
-      "@type": "ImageObject",
+      '@type': 'ImageObject',
       url: `${siteMetadata.siteUrl}${img}`,
-    };
-  });
+    }
+  })
 
-  let authorList;
+  let authorList
   if (authorDetails) {
     authorList = authorDetails.map((author) => {
       return {
-        "@type": "Person",
+        '@type': 'Person',
         name: author.name,
-      };
-    });
+      }
+    })
   } else {
     authorList = {
-      "@type": "Person",
+      '@type': 'Person',
       name: siteMetadata.author,
-    };
+    }
   }
 
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Article",
+    '@context': 'https://schema.org',
+    '@type': 'Article',
     mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": url,
+      '@type': 'WebPage',
+      '@id': url,
     },
     headline: title,
     image: featuredImages,
@@ -87,15 +87,15 @@ export const BlogSeo = ({
     dateModified: modifiedAt,
     author: authorList,
     publisher: {
-      "@type": "Organization",
+      '@type': 'Organization',
       name: siteMetadata.author,
       logo: {
-        "@type": "ImageObject",
+        '@type': 'ImageObject',
         url: `${siteMetadata.siteUrl}${siteMetadata.socialBanner}`,
       },
     },
     description: summary,
-  };
+  }
 
   return (
     <>
@@ -137,5 +137,5 @@ export const BlogSeo = ({
         />
       </Head>
     </>
-  );
-};
+  )
+}

@@ -1,45 +1,45 @@
-import { useState, useRef } from "react";
-import useSWR from "swr";
-import fetcher from "@/lib/fetcher";
-import SuccessMessage from "@/components/SuccessMessage";
-import ErrorMessage from "@/components/ErrorMessage";
-import LoadingSpinner from "@/components/LoadingSpinner";
+import { useState, useRef } from 'react'
+import useSWR from 'swr'
+import fetcher from '@/lib/fetcher'
+import SuccessMessage from '@/components/SuccessMessage'
+import ErrorMessage from '@/components/ErrorMessage'
+import LoadingSpinner from '@/components/LoadingSpinner'
 
 export default function Subscribe() {
-  const [form, setForm] = useState(false);
-  const inputEl = useRef(null);
-  const { data } = useSWR("/api/subscribers", fetcher);
-  const subscriberCount = new Number(data?.count);
+  const [form, setForm] = useState(false)
+  const inputEl = useRef(null)
+  const { data } = useSWR('/api/subscribers', fetcher)
+  const subscriberCount = new Number(data?.count)
 
   const subscribe = async (e) => {
-    e.preventDefault();
-    setForm({ state: "loading" });
+    e.preventDefault()
+    setForm({ state: 'loading' })
 
-    const res = await fetch("/api/subscribe", {
+    const res = await fetch('/api/subscribe', {
       body: JSON.stringify({
         email: inputEl.current.value,
       }),
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
-      method: "POST",
-    });
+      method: 'POST',
+    })
 
-    const { error } = await res.json();
+    const { error } = await res.json()
     if (error) {
       setForm({
-        state: "error",
+        state: 'error',
         message: error,
-      });
-      return;
+      })
+      return
     }
 
-    inputEl.current.value = "";
+    inputEl.current.value = ''
     setForm({
-      state: "success",
+      state: 'success',
       message: `Yay! Thanks for subscribing.`,
-    });
-  };
+    })
+  }
 
   return (
     <div className="max-w-full py-6">
@@ -62,17 +62,17 @@ export default function Subscribe() {
             className="w-25 absolute top-1 right-2 flex h-9 items-center rounded-md bg-primary-700 px-6 py-4 text-white hover:bg-primary-900 dark:text-white"
             type="submit"
           >
-            {form.state === "loading" ? <LoadingSpinner /> : "Subscribe"}
+            {form.state === 'loading' ? <LoadingSpinner /> : 'Subscribe'}
           </button>
         </form>
-        {form.state === "error" ? (
+        {form.state === 'error' ? (
           <ErrorMessage>{form.message}</ErrorMessage>
-        ) : form.state === "success" ? (
+        ) : form.state === 'success' ? (
           <SuccessMessage>{form.message}</SuccessMessage>
         ) : (
           <p className="prose text-center dark:prose-dark">
             {`${
-              subscriberCount > 0 ? subscriberCount.toLocaleString() : "-"
+              subscriberCount > 0 ? subscriberCount.toLocaleString() : '-'
             } subscribers`}
 
             {/* <a>2 issues</a> */}
@@ -80,5 +80,5 @@ export default function Subscribe() {
         )}
       </div>
     </div>
-  );
+  )
 }

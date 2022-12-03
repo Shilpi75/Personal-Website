@@ -1,24 +1,24 @@
-import { useState, useRef } from "react";
+import { useState, useRef } from 'react'
 
 const Pre = (props) => {
-  const textInput = useRef(null);
-  const [hovered, setHovered] = useState(false);
-  const [copied, setCopied] = useState(false);
+  const textInput = useRef(null)
+  const [hovered, setHovered] = useState(false)
+  const [copied, setCopied] = useState(false)
 
   const onEnter = () => {
-    setHovered(true);
-  };
+    setHovered(true)
+  }
   const onExit = () => {
-    setHovered(false);
-    setCopied(false);
-  };
+    setHovered(false)
+    setCopied(false)
+  }
   const onCopy = () => {
-    setCopied(true);
-    navigator.clipboard.writeText(textInput.current.textContent);
+    setCopied(true)
+    navigator.clipboard.writeText(textInput.current.textContent)
     setTimeout(() => {
-      setCopied(false);
-    }, 2000);
-  };
+      setCopied(false)
+    }, 2000)
+  }
 
   return (
     <div
@@ -33,8 +33,8 @@ const Pre = (props) => {
           type="button"
           className={`absolute right-2 top-2  h-8 w-8 rounded border-2 bg-gray-700 p-1 dark:bg-gray-800 ${
             copied
-              ? "border-green-400 focus:border-green-400 focus:outline-none"
-              : "border-gray-300"
+              ? 'border-green-400 focus:border-green-400 focus:outline-none'
+              : 'border-gray-300'
           }`}
           onClick={onCopy}
         >
@@ -43,7 +43,7 @@ const Pre = (props) => {
             viewBox="0 0 24 24"
             stroke="currentColor"
             fill="none"
-            className={copied ? "text-green-400" : "text-gray-300"}
+            className={copied ? 'text-green-400' : 'text-gray-300'}
           >
             {copied ? (
               <>
@@ -70,7 +70,7 @@ const Pre = (props) => {
 
       <pre>{props.children}</pre>
     </div>
-  );
-};
+  )
+}
 
-export default Pre;
+export default Pre

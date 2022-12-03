@@ -1,5 +1,5 @@
-import Image from "next/image";
-import { RoughNotation } from "react-rough-notation";
+import Image from 'next/image'
+import { RoughNotation } from 'react-rough-notation'
 
 export default function Work() {
   return (
@@ -15,7 +15,7 @@ export default function Work() {
             show={true}
             strokeWidth="3"
           >
-            Clients I worked with{" "}
+            Clients I worked with{' '}
           </RoughNotation>
         </h1>
       </div>
@@ -231,5 +231,5 @@ export default function Work() {
         </div>
       </div>
     </>
-  );
+  )
 }

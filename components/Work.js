@@ -1,4 +1,4 @@
-import { RoughNotation } from "react-rough-notation";
+import { RoughNotation } from 'react-rough-notation'
 
 export default function Work() {
   return (
@@ -59,5 +59,5 @@ export default function Work() {
         </div>
       </div>
     </>
-  );
+  )
 }
