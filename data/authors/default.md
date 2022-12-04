@@ -23,13 +23,13 @@ I currently work as a principal product manager at a tech BigCo. In my free time
 synth
 When possible, I also help founders with product, growth, talent acquisition, and fundraising. I am a small investor in:
 
-- ![Calm company fund](https://calmfund.com/)
-- ![Replit](https://replit.com/)
+- [Calm company fund](https://calmfund.com/)
+- [Replit](https://replit.com/)
 
-Anti-portfolio and wishlist (Didn't invest or dragged too long):
+**Anti-portfolio and wishlist (Didn't invest or dragged too long):**
 
-- ![Synthesis school](https://www.synthesis.com/) - online enrichment program for kids ages 8-14 (based on ![Astra Nova](https://www.astranova.org/))
-- ![XanPay](https://xanpay.com/) - modern payments for your next billion customers.
+- [Synthesis school](https://www.synthesis.com/) - an online enrichment program for kids ages 8-14 (based on [Astra Nova](https://www.astranova.org/))
+- [XanPay](https://xanpay.com/) - a modern payments for your next billion customers.
 
 ## Professional milestones
 
