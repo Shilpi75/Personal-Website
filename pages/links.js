@@ -1,8 +1,8 @@
-import siteMetadata from "@/data/siteMetadata";
-import socialLinkData from "@/data/socialLinkData";
-import { PageSeo } from "@/components/SEO";
-import SocialLink from "@/components/SocialLink";
-import Image from "@/components/Image";
+import siteMetadata from "@/data/siteMetadata"
+import socialLinkData from "@/data/socialLinkData"
+import { PageSeo } from "@/components/SEO"
+import SocialLink from "@/components/SocialLink"
+import Image from "@/components/Image"
 
 export default function SocialLinks() {
   return (
@@ -38,5 +38,5 @@ export default function SocialLinks() {
         </div>
       </div>
     </>
-  );
+  )
 }

@@ -1,6 +1,5 @@
-import Link from "./Link";
-import Image from "next/image";
-import { motion } from "framer-motion";
+import Link from "./Link"
+import Image from "next/image"
 
 const Card = ({ title, description, imgSrc, href }) => (
   <div className="mt-1 mb-1 flex flex-auto place-items-center rounded-md border border-gray-300 hover:border-dotted dark:border-gray-600 hover:dark:border-primary-400">
@@ -35,9 +34,9 @@ const Card = ({ title, description, imgSrc, href }) => (
       </Link>
     </div>
   </div>
-);
+)
 
-export default Card;
+export default Card
 
 // /* CARD START */
 // const newCard = ({ title, description, imgSrc, href }) => (

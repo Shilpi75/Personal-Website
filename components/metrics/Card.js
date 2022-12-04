@@ -30,5 +30,5 @@ export default function MetricCard({ header, link, metric, isCurrency }) {
         {metric > 0 ? metric.toLocaleString() : "-"}
       </p>
     </div>
-  );
+  )
 }

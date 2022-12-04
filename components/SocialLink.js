@@ -1,4 +1,4 @@
-import Image from './Image'
+import Image from "./Image"
 
 const SocialLink = ({ title, text, imgSrc, href }) => (
   <div className="mb-5 flex w-full cursor-pointer items-center rounded-md border border-primary-200 bg-primary-100 dark:bg-primary-900">

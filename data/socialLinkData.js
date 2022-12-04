@@ -1,27 +1,27 @@
 const socialLinkData = [
   {
-    title: 'Twitter',
+    title: "Twitter",
     text: `Follow me on twitter.`,
-    imgSrc: '/static/img/projects/google.svg',
-    href: 'https://www.twitter.com/kirso_/',
+    imgSrc: "/static/img/projects/google.svg",
+    href: "https://www.twitter.com/kirso_/",
   },
   {
-    title: 'LinkedIn',
+    title: "LinkedIn",
     text: `Follow me on twitter.`,
-    imgSrc: '/static/img/projects/google.svg',
-    href: 'https://www.twitter.com/kirso_/',
+    imgSrc: "/static/img/projects/google.svg",
+    href: "https://www.twitter.com/kirso_/",
   },
   {
-    title: 'Twitter',
+    title: "Twitter",
     text: `Follow me on twitter.`,
-    imgSrc: '/static/img/projects/google.svg',
-    href: 'https://www.twitter.com/kirso_/',
+    imgSrc: "/static/img/projects/google.svg",
+    href: "https://www.twitter.com/kirso_/",
   },
   {
-    title: 'Twitter',
+    title: "Twitter",
     text: `Follow me on twitter.`,
-    imgSrc: '/static/img/projects/google.svg',
-    href: 'https://www.twitter.com/kirso_/',
+    imgSrc: "/static/img/projects/google.svg",
+    href: "https://www.twitter.com/kirso_/",
   },
 ]
 

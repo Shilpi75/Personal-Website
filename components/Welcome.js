@@ -1,6 +1,6 @@
-import siteMetadata from '@/data/siteMetadata'
-import Icon from '@/components/icons'
-import Image from 'next/image'
+import siteMetadata from "@/data/siteMetadata"
+import Icon from "@/components/icons"
+import Image from "next/image"
 
 export default function Welcome() {
   return (
@@ -25,7 +25,7 @@ export default function Welcome() {
           I am a PM and indie-maker based in Singapore. Love to tinker with side
           projects whilst self-teaching software development and design.
           Occasionally, I write essays on calm life, exploration, experiments
-          and making sense of the world. My{' '}
+          and making sense of the world. My{" "}
           <a href="https://twitter.com/kirso_"> DMs</a> are always open.
         </p>
       </div>
