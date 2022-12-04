@@ -1,6 +1,6 @@
-import Icon from "@/components/icons";
-import Image from "@/components/Image";
-import { PageSeo } from "@/components/SEO";
+import Icon from "@/components/icons"
+import Image from "@/components/Image"
+import { PageSeo } from "@/components/SEO"
 
 export default function AuthorLayout({ children, frontMatter }) {
   const {
@@ -12,7 +12,7 @@ export default function AuthorLayout({ children, frontMatter }) {
     twitter,
     linkedin,
     github,
-  } = frontMatter;
+  } = frontMatter
 
   return (
     <>
@@ -48,5 +48,5 @@ export default function AuthorLayout({ children, frontMatter }) {
         </div>
       </div>
     </>
-  );
+  )
 }

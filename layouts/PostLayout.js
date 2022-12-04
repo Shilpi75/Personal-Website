@@ -1,22 +1,22 @@
-import Link from "@/components/Link";
-import PageTitle from "@/components/PageTitle";
-import SectionContainer from "@/components/SectionContainer";
-import { BlogSeo } from "@/components/SEO";
-import Tag from "@/components/Tag";
-import siteMetadata from "@/data/siteMetadata";
-import Subscribe from "@/components/Subscribe";
+import Link from "@/components/Link"
+import PageTitle from "@/components/PageTitle"
+import SectionContainer from "@/components/SectionContainer"
+import { BlogSeo } from "@/components/SEO"
+import Tag from "@/components/Tag"
+import siteMetadata from "@/data/siteMetadata"
+import Subscribe from "@/components/Subscribe"
 
 const discussUrl = (slug) =>
   `https://mobile.twitter.com/search?q=${encodeURIComponent(
     `${siteMetadata.siteUrl}/blog/${slug}`
-  )}`;
+  )}`
 
 const postDateTemplate = {
   weekday: "long",
   year: "numeric",
   month: "long",
   day: "numeric",
-};
+}
 
 export default function PostLayout({
   frontMatter,
@@ -25,7 +25,7 @@ export default function PostLayout({
   prev,
   children,
 }) {
-  const { slug, date, title, tags } = frontMatter;
+  const { slug, date, title, tags } = frontMatter
 
   return (
     <SectionContainer>
@@ -140,5 +140,5 @@ export default function PostLayout({
         </div>
       </article>
     </SectionContainer>
-  );
+  )
 }

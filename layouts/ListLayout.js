@@ -1,8 +1,8 @@
-import Link from "@/components/Link";
-import Tag from "@/components/Tag";
-import { useState } from "react";
-import Pagination from "@/components/Pagination";
-import formatDate from "@/lib/utils/formatDate";
+import Link from "@/components/Link"
+import Tag from "@/components/Tag"
+import { useState } from "react"
+import Pagination from "@/components/Pagination"
+import formatDate from "@/lib/utils/formatDate"
 
 export default function ListLayout({
   posts,
@@ -10,18 +10,18 @@ export default function ListLayout({
   initialDisplayPosts = [],
   pagination,
 }) {
-  const [searchValue, setSearchValue] = useState("");
+  const [searchValue, setSearchValue] = useState("")
   const filteredBlogPosts = posts.filter((frontMatter) => {
     const searchContent =
-      frontMatter.title + frontMatter.summary + frontMatter.tags.join(" ");
-    return searchContent.toLowerCase().includes(searchValue.toLowerCase());
-  });
+      frontMatter.title + frontMatter.summary + frontMatter.tags.join(" ")
+    return searchContent.toLowerCase().includes(searchValue.toLowerCase())
+  })
 
   // If initialDisplayPosts exist, display it if no searchValue is specified
   const displayPosts =
     initialDisplayPosts.length > 0 && !searchValue
       ? initialDisplayPosts
-      : filteredBlogPosts;
+      : filteredBlogPosts
 
   return (
     <>
@@ -55,7 +55,7 @@ export default function ListLayout({
         <ul>
           {!filteredBlogPosts.length && "No posts found."}
           {displayPosts.map((frontMatter) => {
-            const { slug, date, title, summary, tags } = frontMatter;
+            const { slug, date, title, summary, tags } = frontMatter
             return (
               <li key={slug} className="py-4">
                 <article className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
@@ -87,7 +87,7 @@ export default function ListLayout({
                   </div>
                 </article>
               </li>
-            );
+            )
           })}
         </ul>
       </div>
@@ -98,5 +98,5 @@ export default function ListLayout({
         />
       )}
     </>
-  );
+  )
 }
