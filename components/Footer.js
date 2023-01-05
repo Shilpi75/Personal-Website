@@ -7,9 +7,10 @@ export default function Footer() {
     <footer>
       <div className="mt-16 flex flex-col items-center">
         <div className="prose mb-5 flex space-x-4 dark:prose-dark">
-          <Icon kind="github" href={siteMetadata.github} />
-          <Icon kind="linkedin" href={siteMetadata.linkedin} />
           <Icon kind="twitter" href={siteMetadata.twitter} />
+          <Icon kind="linkedin" href={siteMetadata.linkedin} />
+          <Icon kind="medium" href={siteMetadata.medium} />
+          <Icon kind="github" href={siteMetadata.github} />
         </div>
         <div className="mb-2 flex space-x-2 text-lg text-gray-700 dark:text-gray-200">
           <div>{siteMetadata.author}</div>
