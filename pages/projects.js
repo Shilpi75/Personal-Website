@@ -11,7 +11,7 @@ export default function Projects() {
         description={siteMetadata.description}
       />
       <div className="divide-gray-3 divide-y">
-        <div className="prose space-y-2 pt-6 pb-8 text-center dark:prose-dark md:space-y-5">
+        <div className="prose pt-6 pb-10 text-center dark:prose-dark ">
           <h1>Projects</h1>
           <p>List of projects I have been tinkering with</p>
         </div>

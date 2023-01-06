@@ -8,7 +8,7 @@ import ThemeSwitch from "./ThemeSwitch"
 const LayoutWrapper = ({ children }) => {
   return (
     <SectionContainer>
-      <div className="min-w-1/2 flex h-screen flex-col justify-between">
+      <div className="flex h-screen flex-col justify-between">
         <header className="flex items-center justify-center py-10">
           <div className="flex items-center text-base leading-7">
             <div className="hidden sm:block">
