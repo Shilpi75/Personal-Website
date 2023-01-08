@@ -27,7 +27,7 @@ export default function Home({ posts }) {
       />
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="prose space-y-2 pt-6 pb-6 dark:prose-dark md:space-y-5">
-          <Welcome />
+          {/* <Welcome /> */}
           <Subscribe />
           {/* <Work />
           <Clients /> */}

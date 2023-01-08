@@ -5,6 +5,7 @@ import { BlogSeo } from "@/components/SEO"
 import Tag from "@/components/Tag"
 import siteMetadata from "@/data/siteMetadata"
 import Subscribe from "@/components/Subscribe"
+import formatDate from "@/lib/utils/formatDate"
 
 const discussUrl = (slug) =>
   `https://mobile.twitter.com/search?q=${encodeURIComponent(
@@ -38,7 +39,7 @@ export default function PostLayout({
         <div className="divide-y divide-gray-200 dark:divide-gray-700">
           <header className="py-6">
             <div className="space-y-1 text-center">
-              <dl className="space-y-10">
+              {/* <dl className="space-y-10">
                 <div>
                   <dt className="sr-only">Published on</dt>
                   <dd className="text-lg text-gray-600 dark:text-gray-300">
@@ -50,18 +51,20 @@ export default function PostLayout({
                     </time>
                   </dd>
                 </div>
-              </dl>
+              </dl> */}
               <div>
                 <PageTitle>{title}</PageTitle>
               </div>
-
-              {tags && (
+              <div className="flex pt-3 font-small text-gray-500 dark:text-gray-400 justify-center">
+                <time dateTime={date}>{formatDate(date)}</time>
+              </div>
+              {/* {tags && (
                 <div className="tflex flex-wrap">
                   {tags.map((tag) => (
                     <Tag key={tag} text={tag} />
                   ))}
                 </div>
-              )}
+              )} */}
             </div>
           </header>
 
