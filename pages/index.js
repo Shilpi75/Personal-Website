@@ -29,36 +29,24 @@ export default function Home({ posts }) {
         <div className="prose space-y-2 pt-6 pb-6 dark:prose-dark md:space-y-5">
           <Welcome />
           <Subscribe />
-          <Work />
-          <Clients />
-          <h1 className="py-6 text-center ">
-            <RoughNotation
-              animate="true"
-              animationDelay="1000"
-              animationDuration="4000"
-              type="circle"
-              color="#5DE4c7"
-              show={true}
-              strokeWidth="3"
-            >
-              Blog
-            </RoughNotation>
-          </h1>
+          {/* <Work />
+          <Clients /> */}
+          <h1 className="py-6 ">Latest</h1>
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && "No posts found."}
           {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
             const { slug, date, title, summary, tags } = frontMatter
             return (
-              <li key={slug} className="py-12">
+              <li key={slug} className="py-6">
                 <article>
                   <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
-                    <dl>
+                    {/* <dl>
                       <dt className="sr-only">Published on</dt>
                       <dd className="text-lg font-medium leading-7 text-gray-500 dark:text-gray-400">
                         <time dateTime={date}>{formatDate(date)}</time>
                       </dd>
-                    </dl>
+                    </dl> */}
                     <div className="space-y-5 xl:col-span-3">
                       <div className="space-y-6">
                         <div>
@@ -71,17 +59,15 @@ export default function Home({ posts }) {
                             </Link>
                           </h2>
                           <div className="text-lg font-medium leading-7"></div>
-                          <div className="flex flex-wrap">
-                            {tags.map((tag) => (
-                              <Tag key={tag} text={tag} className="text-lg" />
-                            ))}
+                          <div className="flex flex-wrap pt-3 font-small text-gray-500 dark:text-gray-400">
+                            <time dateTime={date}>{formatDate(date)}</time>
                           </div>
                         </div>
                         <div className="prose max-w-none dark:prose-dark">
                           {summary}
                         </div>
                       </div>
-                      <div className="text-base font-medium uppercase leading-7">
+                      <div className="text-base font-medium leading-7">
                         <Link
                           href={`/blog/${slug}`}
                           className="text-primary-700 hover:text-primary-900 dark:text-primary-400 hover:dark:text-primary-900"

@@ -52,19 +52,19 @@ export default function ListLayout({
             </svg>
           </div>
         </div>
-        <ul>
+        <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!filteredBlogPosts.length && "No posts found."}
           {displayPosts.map((frontMatter) => {
             const { slug, date, title, summary, tags } = frontMatter
             return (
-              <li key={slug} className="py-4">
+              <li key={slug} className="py-9">
                 <article className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
-                  <dl>
+                  {/* <dl>
                     <dt className="sr-only">Published on</dt>
                     <dd className="text-lg font-medium leading-7 text-gray-500 dark:text-gray-400">
                       <time dateTime={date}>{formatDate(date)}</time>
                     </dd>
-                  </dl>
+                  </dl> */}
                   <div className="space-y-3 xl:col-span-3">
                     <div>
                       <h3 className="font-serif text-3xl font-bold leading-7 tracking-normal">
@@ -75,10 +75,8 @@ export default function ListLayout({
                           {title}
                         </Link>
                       </h3>
-                      <div className="flex flex-wrap">
-                        {tags.map((tag) => (
-                          <Tag key={tag} text={tag} />
-                        ))}
+                      <div className="flex flex-wrap pt-3 fomt-small text-gray-500 dark:text-gray-400">
+                        <time dateTime={date}>{formatDate(date)}</time>
                       </div>
                     </div>
                     <div className="prose max-w-none dark:prose-dark">
