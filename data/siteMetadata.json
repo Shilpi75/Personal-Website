@@ -3,7 +3,7 @@
   "author": "Shilpi Gupta",
   "headerTitle": "Shilpi Gupta",
   "language": "en-us",
-  "siteUrl": "https://www.kirillso.com",
+  "siteUrl": "https://www.onepercentbetter.dev",
   "siteRepo": "https://github.com/Shilpi75/Personal-Website",
   "image": "/static/img/avatar.png",
   "socialBanner": "/static/img/twitter-card.png",
@@ -13,5 +13,5 @@
   "linkedin": "https://www.linkedin.com/in/shilpi75/",
   "medium": "https://medium.com/@shilpi75",
   "locale": "en-US",
-  "canonical": "https://www.kirillso.com"
+  "canonical": "https://www.onepercentbetter.dev"
 }
